@@ -27,7 +27,7 @@ This project aims to build a machine learning model to predict airline passenger
 
 
 
-##Extras
+## Extras
 
 ## Exploratory Data Analysis Highlights
 
