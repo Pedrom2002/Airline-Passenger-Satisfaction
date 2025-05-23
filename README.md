@@ -135,8 +135,7 @@ test.csv     # Test data for batch predictions
 
 - **Cleanliness as a Multiplier**  
   Cabin cleanliness amplifies the perceived quality of other services (food, entertainment, seating). Prioritizing visible hygiene standards can yield outsized gains in overall satisfaction.
-- Significant difference in satisfaction by gender confirmed via t-test (p < 0.001).  
-- ANOVA tests for satisfaction differences across flight classes support strong class impact.
+- Significant difference in satisfaction by gender confirmed via t-test (p < 0.001). 
 
 
 ## 📜 License
