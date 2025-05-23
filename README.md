@@ -1,31 +1,104 @@
-# Airline Passenger Satisfaction Prediction Model ✈️📊
+# Airline Passenger Satisfaction Prediction ✈️
 
-## Project Overview
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)  
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)  
+[![Streamlit](https://img.shields.io/badge/streamlit-✨-orange.svg)](https://streamlit.io/)  
+[![Status](https://img.shields.io/badge/status-Complete-brightgreen.svg)](https://github.com/Pedrom2002/Airline-Passenger-Satisfaction)
 
-This project aims to build a machine learning model to predict airline passenger satisfaction using the XGBoost algorithm. It covers the full ML pipeline—from Exploratory Data Analysis (EDA) and preprocessing, to model training, hyperparameter tuning, interpretability using SHAP, and deployment via an interactive Streamlit web application.
-
-**Dataset:**  
-[Airline Passenger Satisfaction (Kaggle)](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction)  
-120,000+ samples, 25 features capturing flight experience and passenger demographics.
-
----
-**Key Highlights**:  
-- End-to-end ML pipeline optimized for batch predictions  
-- Model accuracy: **96.45%** on unseen data  
-- SHAP-powered explainability for business decisions  
-- GPU-accelerated training/inference  
-
-## Features & Components
-
-| Data Processing                         | Model Development                                      | Production & Deployment                         |
-|---------------------------------------|-------------------------------------------------------|----------------------------------------------------|
-| ✔️ Automated missing value imputation | ✔️ Comparison of multiple algorithms (XGBoost, RF, LR)| ✔️ Streamlit web app with real-time predictions   |
-| ✔️ Categorical encoding & scaling     | ✔️ Hyperparameter tuning (RandomizedSearchCV)         | ✔️ Batch prediction support                       |
-| ✔️ Feature engineering & selection    | ✔️ GPU-accelerated training                            | ✔️ SHAP-based explainability dashboard           |
+Machine Learning project to predict airline passenger satisfaction using XGBoost, including EDA, hyperparameter tuning, and a Streamlit deployment.
 
 ---
 
+## 🚀 Table of Contents
+- [Overview](#overview)  
+- [Dataset](#dataset)  
+- [Repository Structure](#repository-structure)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [ML Pipeline](#ml-pipeline)  
+- [EDA](#eda)  
+- [Training & Evaluation](#training--evaluation)  
+- [Web App](#web-app)  
+- [Results](#results)  
+- [Extras](#Extras)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Contact](#contact)  
 
+---
+
+## 📖 Overview
+This repository contains the complete pipeline to **predict passenger satisfaction** on commercial flights. It includes exploratory data analysis, modeling with XGBoost, result interpretation with SHAP, and a Streamlit web interface for inference.
+
+## 📊 Dataset
+Source: [Kaggle – Airline Passenger Satisfaction](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction)  
+- **Records**: ~129,000 flights  
+- **Features**: demographics (age, gender), class, punctuality, cleanliness, services (Wi-Fi, entertainment), and target (satisfied/unsatisfied).
+
+Files in `data/`:
+```bash
+train.csv      # Training data
+test.csv     # Test data for batch predictions
+```
+
+## 📁 Repository Structure
+```bash
+├── data/                   
+│   ├── train.csv           
+│   └── test.csv          
+├── models/                 
+│   └── xgb_model.pkl       
+├── EDAnotebook.ipynb        
+├── modelnotebook.ipynb   
+├── app.py                  
+├── requirements.txt        
+└── README.md               
+```
+
+## ⚙️ Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Pedrom2002/Airline-Passenger-Satisfaction.git
+   cd Airline-Passenger-Satisfaction
+   ```
+2. Create a virtual environment and install dependencies:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate   # macOS/Linux
+   venv\Scripts\activate    # Windows
+   pip install -r requirements.txt
+   ```
+
+## 🎯 Usage 
+- **Modeling**: run `modelnotebook.ipynb` to train and tune the model.  
+- **App**: start the Streamlit app:
+  ```bash
+  streamlit run app.py
+  ```
+  Access it at `http://localhost:8501`.
+
+## 🔄 ML Pipeline
+1. Data loading and cleaning  
+2. Feature encoding and scaling  
+3. Train/test split  
+4. XGBoost training + hyperparameter tuning (`RandomizedSearchCV`)  
+5. Evaluation (accuracy, precision, recall, F1-score)  
+6. Interpretation with SHAP
+   
+
+## 🏆 Training & Evaluation
+- **Accuracy**: 96.5%  
+- **F1-score**: 0.96  
+- **Top features**: cleanliness, punctuality, comfort (via SHAP)  
+
+## 🌐 Web App
+- Individual prediction via form  
+- CSV upload for batch inference  
+- Variable importance charts  
+
+## 📈 Results
+- XGBoost outperforms Random Forest and Logistic Regression  
+- Insights for service improvements (cleanliness and entertainment)  
 
 ## Extras
 
@@ -66,7 +139,12 @@ This project aims to build a machine learning model to predict airline passenger
 - ANOVA tests for satisfaction differences across flight classes support strong class impact.
 
 
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).
 
+## 📬 Contact
+Pedro M. – [pedrom02.dev@gmail.com](mailto:pedrom02.dev@gmail.com)  
+GitHub: [@Pedrom2002](https://github.com/Pedrom2002)
 
 
 
