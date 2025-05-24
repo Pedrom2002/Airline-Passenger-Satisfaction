@@ -79,11 +79,12 @@ test.csv     # Test data for batch predictions
 
 ## 🔄 ML Pipeline
 1. Data loading and cleaning  
-2. Feature encoding and scaling  
-3. Train/test split  
-4. XGBoost training + hyperparameter tuning (`RandomizedSearchCV`)  
-5. Evaluation (accuracy, precision, recall, F1-score)  
-6. Interpretation with SHAP
+2. Feature encoding and scaling
+4. handling missing values
+5. Train/test split  
+6. XGBoost training + hyperparameter tuning (`RandomizedSearchCV`)  
+7. Evaluation (accuracy, precision, recall, F1-score)  
+8. Interpretation with SHAP
    
 
 ## 🏆 Training & Evaluation
